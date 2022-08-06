@@ -29,6 +29,8 @@ GEM
     rspec-mocks (3.11.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
+    rspec-sorbet (1.8.3)
+      sorbet-runtime
     rspec-support (3.11.0)
     sorbet (0.5.10274)
       sorbet-static (= 0.5.10274)
@@ -67,6 +69,7 @@ PLATFORMS
 
 DEPENDENCIES
   rspec
+  rspec-sorbet
   sorbet
   sorbet-runtime
   tapioca

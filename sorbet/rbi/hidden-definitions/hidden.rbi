@@ -2987,6 +2987,11 @@ class Delegator
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
+class Dependency
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class DidYouMean::ClassNameChecker
   def class_name(); end
 
@@ -4525,6 +4530,12 @@ module RSpec::Mocks::Version
 end
 
 RSpec::SharedContext = RSpec::Core::SharedContext
+
+module RSpec::Sorbet::Doubles
+  INLINE_DOUBLE_REGEX = ::T.let(nil, ::T.untyped)
+  TYPED_ARRAY_MESSAGE = ::T.let(nil, ::T.untyped)
+  VERIFYING_DOUBLE_OR_DOUBLE = ::T.let(nil, ::T.untyped)
+end
 
 module RSpec::Support
   DEFAULT_FAILURE_NOTIFIER = ::T.let(nil, ::T.untyped)
