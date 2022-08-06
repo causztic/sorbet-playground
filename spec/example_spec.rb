@@ -1,3 +1,4 @@
+# typed: false
 require_relative '../models/test_model'
 
 describe TestModel do
